@@ -1,10 +1,9 @@
 # Hi there, welcome to my profile 👋
 
 ### Polyglot / education software enthusiast / recreational gaming modder
-
 <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=wendall911&show_icons=true&theme=dark" />&nbsp;
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wendall911&theme=dark&layout=compact" />
+    <img src="https://streak-stats.demolab.com/?user=wendall911&theme=dark" /><br/>
+    <img src="https://github-readme-stats.vercel.app/api?username=wendall911&show_icons=true&theme=dark" />
 </div>
 
 - 🔭 I’m currently working on educational software, professional writing, consulting and occasional modding.
