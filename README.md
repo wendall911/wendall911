@@ -11,6 +11,7 @@
 - 🌱 I’m **ALWAYS** learning
 
 ## Minecraft Mod Projects
+### Projects as of 8/2024 have over 2.5M downloads between Modrinth and Curseforge
 - Tinkers' Survival [![Project](http://cf.way2muchnoise.eu/full_294667_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tinkersurvival)
   - A Minecraft 1.12+ mod designed to create an early game survival concept for Tinkers' Construct.
 - Tinkers' Survival Official Modpack [![Project](http://cf.way2muchnoise.eu/full_320240_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/tinkers-survival-official)
