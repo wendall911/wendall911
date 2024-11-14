@@ -2,6 +2,8 @@
 
 ### Polyglot / education software enthusiast / recreational gaming modder
 <div align="center">
+    <img src="https://github-readme-streak-daydreamsdeveloper.vercel.app/?user=wendall911&theme=dark" />
+    <br />
     <img src="https://github-readme-stats.vercel.app/api?username=wendall911&show_icons=true&theme=dark" />
 </div>
 
