@@ -1,6 +1,6 @@
 # Hi there, welcome to my profile 👋
 
-### Polyglot / education software enthusiast / recreational gaming modder
+### Polyglot / free software enthusiast / gaming modder
 <div align="center">
     <img src="https://github-readme-streak-daydreamsdeveloper.vercel.app/?user=wendall911&theme=dark" />
     <br />
