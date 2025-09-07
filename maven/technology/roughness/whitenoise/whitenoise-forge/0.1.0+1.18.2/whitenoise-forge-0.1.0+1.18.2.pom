@@ -5,4 +5,12 @@
   <groupId>technology.roughness.whitenoise</groupId>
   <artifactId>whitenoise-forge</artifactId>
   <version>0.1.0+1.18.2</version>
+  <dependencies>
+    <dependency>
+      <groupId>net.minecraftforge</groupId>
+      <artifactId>forge</artifactId>
+      <version>1.18.2-40.3.11_mapped_parchment_2022.11.06-1.18.2</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
 </project>
