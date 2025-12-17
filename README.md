@@ -20,10 +20,14 @@
   - A Minecraft 1.18+ mod designed to provide modpack integrations with other mods for Tinkers' Construct
 - Homeostatic [![Project](http://cf.way2muchnoise.eu/full_634466_downloads.svg)](https://minecraft.curseforge.com/projects/634466) [![Project](https://modrinth.roughness.technology/full_homeostatic_downloads.svg)](https://modrinth.com/mod/homeostatic)
   - A more realistic temperature and thirst mod for Minecraft 1.18.2+
+- Homeostatic Seasons [![Project](http://cf.way2muchnoise.eu/full_1122223_downloads.svg)](https://minecraft.curseforge.com/projects/1122223) [![Project](https://modrinth.roughness.technology/full_homeostatic-seasons_downloads.svg)](https://modrinth.com/mod/homeostatic-seasons)
+  - Performance and realism-driven full-featured seasons mod, dynamically changing biomes and weather as you play.
 - Better Days [![](http://cf.way2muchnoise.eu/full_895618_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/betterdays) [![Project](https://modrinth.roughness.technology/full_betterdays_downloads.svg)](https://modrinth.com/mod/betterdays)
   - A Minecraft 1.15.2+ mod to designed to extend the length of the crazy short minecraft day.
 - Charged Charms [![](http://cf.way2muchnoise.eu/full_682683_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/charged-charms) [![Project](https://modrinth.roughness.technology/full_charged-charms_downloads.svg)](https://modrinth.com/mod/charged-charms)
   - A Minecraft 1.18.2+ mod that adds several "Charged" charms
+- Mob Champions [![](http://cf.way2muchnoise.eu/full_1144299_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/mobchampions) [![Project](https://modrinth.roughness.technology/full_mobchampions_downloads.svg)](https://modrinth.com/mod/mpbchampions)
+  - Mob champions are special elite versions of regular mobs that spawn with armor, weapons, enhanced stats and effects. Legendary loot!
 - CreeperFireworks [![Project](http://cf.way2muchnoise.eu/full_1071230_downloads.svg)](https://minecraft.curseforge.com/projects/1071230) [![Project](https://modrinth.roughness.technology/full_creeper-fireworks-mod_downloads.svg)](https://modrinth.com/mod/creeper-fireworks-mod)
   - A NeoForge and Fabric Mod. Fine tuned creeper mob griefing that changes how creeper explosions are handled. Fireworks still work even if mob griefing is disabled.
 - ActuallyHarvest [![Project](http://cf.way2muchnoise.eu/full_1076278_downloads.svg)](https://minecraft.curseforge.com/projects/1076278) [![Project](https://modrinth.roughness.technology/full_actually-harvest_downloads.svg)](https://modrinth.com/mod/actually-harvest)
