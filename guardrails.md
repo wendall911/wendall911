@@ -35,6 +35,10 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - Commit messages must be concise, human-readable summaries of what changed.
 - Do not include AI-isms, filler, or excessive technical detail that duplicates the diff.
 
+## Branch Safety
+- Before creating commits, verify the local branch matches the remote default branch (typically `main`) and tracks the correct upstream.
+- If branch names diverge (for example `master` local vs `main` remote), align branches first and confirm commits are on the push target branch before proceeding.
+
 ## Command Verification
 - Always run `git status` or equivalent after file operations to confirm expected state.
 - Never assume file operations succeeded without explicit verification.
