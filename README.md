@@ -10,6 +10,14 @@
 - 🔭 I’m currently working on educational software, professional writing, consulting and occasional modding.
 - 🌱 I’m **ALWAYS** learning
 
+## Agent Rules Management
+- Canonical guardrails source for child repos: `guardrails.md`
+- Canonical child instructions template: `.github/copilot-instructions.project-template.md`
+- Sync to all child repos: `.github/sync-project-agent-rules.sh sync`
+- Check drift across child repos: `.github/sync-project-agent-rules.sh check`
+- Install pre-commit guard: `install -m 755 .github/hooks/pre-commit .git/hooks/pre-commit`
+- Pre-commit hook runs drift check automatically before each commit.
+
 ## Minecraft Mod Projects
 ### [![](http://cf.way2muchnoise.eu/author/short_wendall911.svg)](https://www.curseforge.com/members/wendall911/projects) on CurseForge, and [![](https://modrinth.roughness.technology/author/short_wendall911.svg)](https://modrinth.com/user/wendall911) on Modrinth!
 - Tinkers' Survival [![Project](http://cf.way2muchnoise.eu/full_294667_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tinkersurvival) [![Project](https://modrinth.roughness.technology/full_tinkersurvival_downloads.svg)](https://modrinth.com/mod/tinkersurvival)
