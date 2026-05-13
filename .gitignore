@@ -7,5 +7,7 @@
 # Keep workspace metadata and top-level markdown docs
 !.github/
 !.github/**
+!docs/
+!docs/**
 !.gitignore
 !*.md
