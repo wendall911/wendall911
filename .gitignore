@@ -1,0 +1,11 @@
+# Parent workspace repository policy
+# This repo tracks only top-level docs/rules artifacts.
+
+# Ignore child project directories (standalone repos)
+*/
+
+# Keep workspace metadata and top-level markdown docs
+!.github/
+!.github/**
+!.gitignore
+!*.md
