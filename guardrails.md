@@ -40,6 +40,16 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - If branch names diverge (for example `master` local vs `main` remote), align branches first and confirm commits are on the push target branch before proceeding.
 - Never create or use `master` when the repository default branch is `main`.
 
+## Node Test Script Safety
+- Release/validation commands must use non-watch test modes so commands terminate (for example `vitest run`, not `vitest`).
+- Watch mode must be isolated to explicit opt-in scripts (for example `test:watch`) and must not be used in preflight, CI, or release scripts.
+
+## Release Command Discipline
+- Use project-defined script commands only for release validation and publishing flows.
+- Do not substitute ad-hoc command chains when an official project script exists.
+- Path-pin build/release commands to the intended repository and never rely on inherited terminal cwd.
+- Before running package-manager scripts, verify the expected project manifest exists in that repo; if missing, stop and correct context first.
+
 ## Command Verification
 - Always run `git status` or equivalent after file operations to confirm expected state.
 - Never assume file operations succeeded without explicit verification.
