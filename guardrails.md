@@ -43,6 +43,8 @@ These guardrails apply across all editors and projects to prevent wasted compute
 ## Command Verification
 - Always run `git status` or equivalent after file operations to confirm expected state.
 - Never assume file operations succeeded without explicit verification.
+- Never claim completion until command output verifies the exact requested action in the target repository.
+- Always include the repository path in verification commands for multi-repo work.
 
 ## Reference
 - Workspace-specific guardrails: check for project-level guardrails in `.github/` folder.

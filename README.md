@@ -10,16 +10,6 @@
 - 🔭 I’m currently working on educational software, professional writing, consulting and occasional modding.
 - 🌱 I’m **ALWAYS** learning
 
-## Agent Rules Management
-- Canonical guardrails source for child repos: `guardrails.md`
-- Canonical child instructions template: `.github/copilot-instructions.project-template.md`
-- One-command setup/sync for all child repos (rules + hooks): `.github/sync-project-agent-rules.sh sync`
-- Drift check across child repos (rules + hooks): `.github/sync-project-agent-rules.sh check`
-- Compatibility wrapper: `.github/install-hooks-all-repos.sh` (calls sync command)
-- Child repo pre-commit hook verifies required agent-rule files exist.
-- New project onboarding guide: `NEW_PROJECT_REPOSITORY_SETUP.md`
-
-
 ## Minecraft Mod Projects
 ### [![](http://cf.way2muchnoise.eu/author/short_wendall911.svg)](https://www.curseforge.com/members/wendall911/projects) on CurseForge, and [![](https://modrinth.roughness.technology/author/short_wendall911.svg)](https://modrinth.com/user/wendall911) on Modrinth!
 - Tinkers' Survival [![Project](http://cf.way2muchnoise.eu/full_294667_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tinkersurvival) [![Project](https://modrinth.roughness.technology/full_tinkersurvival_downloads.svg)](https://modrinth.com/mod/tinkersurvival)
