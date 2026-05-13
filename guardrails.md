@@ -4,6 +4,7 @@ These guardrails apply across all editors and projects to prevent wasted compute
 
 ## Execution Scope
 - Follow explicit user requests exactly; do not perform adjacent or substituted actions unless asked.
+- Do not infer additional checks, audits, or validation work beyond the explicit instruction. If the user asks to "add rules," do not audit the project for rule gaps first; only create/add the rules requested. Never perform discovery-and-report work unless explicitly asked.
 - If intent is unclear, infer the most useful likely action and proceed instead of guessing.
 - Treat every user sentence as an instruction-bearing requirement until explicitly resolved.
 - Before first edit, create an internal checklist that maps each sentence/constraint to a concrete action.
