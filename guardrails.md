@@ -59,6 +59,8 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - Do not substitute ad-hoc command chains when an official project script exists.
 - Path-pin build/release commands to the intended repository and never rely on inherited terminal cwd.
 - Before running package-manager scripts, verify the expected project manifest exists in that repo; if missing, stop and correct context first.
+- If a repository uses tag-gated CI deployment, deployment is incomplete until both commit and tags are pushed (for example `git push && git push --tags`).
+- Follow the repository README deployment sequence exactly and in order; do not skip tag creation or alter release commit/tag format.
 
 ## Command Verification
 - Always run `git status` or equivalent after file operations to confirm expected state.
