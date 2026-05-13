@@ -57,6 +57,11 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - Never claim completion until command output verifies the exact requested action in the target repository.
 - Always include the repository path in verification commands for multi-repo work.
 
+## Rule Changes and Governance
+- Any new rule or guardrail change must be explicitly committed to `/home/wendallc/Repos/git/github/minecraft/wendall911/guardrails.md` (the source-of-truth repository) before propagating to project-specific or global files.
+- Verify the commit to wendall911 main is pushed before considering the rule finalized.
+- Only after source-of-truth update is verified should the same rule be added to project-specific `.github/guardrails.md` or global prompt files.
+
 ## Reference
 - Workspace-specific guardrails: check for project-level guardrails in `.github/` folder.
 - These rules are cross-editor and apply to GitHub Copilot, Cursor, or any AI assistant in this environment.
