@@ -2,6 +2,14 @@
 
 These guardrails apply across all editors and projects to prevent wasted compute time and missteps.
 
+## Read First (Mandatory)
+- Approval-first execution: do not modify files, commit, tag, or push without explicit user approval for that exact next action.
+- Pause after each approved action and request approval before the next action.
+- Scope lock: do only what was requested; do not add adjacent work.
+- Before any implementation action, review these guardrails and confirm they are being applied.
+- Initial read-only discovery is allowed before full implementation, but no write action may begin until guardrails are reviewed.
+- After each action, verify and report exact outcomes (changed files, commit message, push target/hash where applicable).
+
 ## Execution Scope
 - Follow explicit user requests exactly; do not perform adjacent or substituted actions unless asked.
 - Do not infer additional checks, audits, or validation work beyond the explicit instruction. If the user asks to "add rules," do not audit the project for rule gaps first; only create/add the rules requested. Never perform discovery-and-report work unless explicitly asked.
