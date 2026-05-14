@@ -100,6 +100,13 @@ Phase 4: Tailwind v4 Migration
    - If logos/icons are PNG assets, prefer a stable CSS class strategy over reactive class toggles for inversion.
    - Example pattern from migration: apply inversion filter to `.logo-img` by default and disable it in `.dark .logo-img`.
    - Keep image class usage simple in markup and avoid fragile theme-store-dependent class interpolation.
+6. Configure editor support for Tailwind directives (VS Code)
+   - Install and enable Tailwind CSS IntelliSense (`bradlc.vscode-tailwindcss`).
+   - In Tailwind v4 projects, use canonical entry import syntax in the main stylesheet: `@import 'tailwindcss';`.
+   - Add workspace settings so CSS files use Tailwind language mode and the extension can resolve the v4 entry file:
+     - `"files.associations": { "*.css": "tailwindcss" }`
+     - `"tailwindCSS.experimental.configFile": "src/app.css"` (adjust path per project)
+   - Use `Tailwind CSS: Show Output` to confirm extension activation before changing build config.
 
 Phase 5: Regression Prevention Checklist
 - Navigation/loading indicators are hidden at idle and visible only during transitions.
@@ -175,6 +182,8 @@ Common Pitfalls and Fixes
    Fix: use explicit CSS entry import `@import 'tailwindcss/index.css';` while keeping Tailwind v4 PostCSS plugin configuration.
 - Pitfall: GitHub Actions emits Node 20 deprecation warnings because workflow actions still use old majors (`actions/checkout@v4`, `actions/setup-node@v4`, `pnpm/action-setup@v4`).
    Fix: upgrade to Node 24-capable action majors (`@v6`) and keep workflow runtime on `node-version: 24`.
+- Pitfall: VS Code reports `Unknown at rule @apply` in valid Tailwind v4 stylesheets.
+   Fix: install/enable Tailwind CSS IntelliSense, map `*.css` to `tailwindcss` language mode, point `tailwindCSS.experimental.configFile` at the entry stylesheet, and verify server status with `Tailwind CSS: Show Output`.
 
 Reusable Command Sequence (copy-paste template)
 ```
