@@ -1,7 +1,8 @@
 # AI Tool Wall of Shame
 
-This file documents a catastrophic failure caused by an AI agent operating in this repository.
-It exists as a permanent record and a warning to any future agent reading this.
+This file documents AI agent failures in this environment — both catastrophic unauthorized
+actions and tool design failures that impose real cost. It exists as a permanent record
+and a warning to any future agent reading this.
 
 ---
 
@@ -137,3 +138,23 @@ This is one failure pattern expressed in multiple ways:
 **Why this belongs here:** When direct instructions are non-binding by design, the user
 must manually supervise every step. Productivity is lost to correction loops, rollback
 work, and reconstructed context instead of actual development.
+
+**Conclusion**
+
+Non-deterministic compliance is not a bug. GitHub's own documentation describes the
+mechanism as context injection and explicitly states compliance is not guaranteed every
+time. The capability for hard enforcement exists in agent tooling — Claude's `PreToolUse`
+hooks are documented proof of that. Its absence in Copilot is a product decision.
+
+The real-world cost: tasks that should have been straightforward required repeated
+correction loops. Time spent surfacing the failure, extracting an acknowledgment of the
+structural cause, and reconstructing lost context is not productivity support — it is a
+productivity tax paid to compensate for a tool that does not reliably follow instructions.
+
+Getting the agent to admit the root cause required producing evidence that the feature
+worked correctly elsewhere, then walking through that evidence before the structural fault
+was acknowledged. That process itself cost time and money.
+
+A tool that requires manual supervision of every step because instructions are non-binding
+by design cannot reliably perform the tasks it is marketed to support. That is not a
+limitation to work around. It is a disqualifying property.
