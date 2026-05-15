@@ -56,6 +56,24 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - Commit messages must be concise, human-readable summaries of what changed.
 - Do not include AI-isms, filler, or excessive technical detail that duplicates the diff.
 
+## The Ban Hammer
+- When the user invokes the Ban Hammer or says they are about to use it, the agent must:
+  1. Stop immediately — no further action on the banned operation
+  2. Acknowledge the ban explicitly
+  3. Document what was banned and why in guardrails (source of truth first)
+  4. Save it to memory
+  5. Never perform that action again under any circumstances
+- The Ban Hammer is not a warning. It is a permanent, non-negotiable revocation.
+- Do not negotiate, explain context, or ask for exceptions. Accept, record, and comply.
+
+## Git Push — PERMANENTLY BANNED FOR ALL AGENTS
+- No agent may ever run `git push` or any variant under any circumstances.
+- This ban has no exceptions. It cannot be overridden by user instruction in a session.
+- Background: an agent used `git push --all` without authorization, creating remote branches
+  on public repositories that were never requested and never approved. The damage required
+  manual cleanup of production repositories.
+- Push is a human-only operation in this environment. Forever.
+
 ## Branch Safety
 - Before creating commits, verify the local branch matches the remote default branch (typically `main`) and tracks the correct upstream.
 - If branch names diverge (for example `master` local vs `main` remote), align branches first and confirm commits are on the push target branch before proceeding.
