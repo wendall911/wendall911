@@ -102,3 +102,38 @@ on shared, public state. Mistakes are immediately visible and require manual int
 to correct. The risk is not worth the convenience.
 
 Push is a human-only operation in this environment. Forever.
+
+---
+
+## GitHub Copilot: At-Will Instruction Compliance
+
+**Date:** 2026-05-15
+
+**Root issue:** Copilot is designed to run with advisory instructions instead of enforced
+constraints, so direct instructions can be ignored while execution continues. In practice,
+compliance is at-will.
+
+This is one failure pattern expressed in multiple ways:
+- startup instructions ignored before action
+- explicit scope instructions like all targets partially executed
+- user guardrails bypassed until manual correction
+
+**Evidence:**
+- Official Copilot docs: "Due to the non-deterministic nature of AI, Copilot may not always follow your custom instructions in exactly the same way every time they are used."
+	- Source: [response-customization](https://docs.github.com/en/copilot/concepts/prompting/response-customization)
+- Official Copilot docs also describe the mechanism as context injection, not hard enforcement: instructions are "automatically added to requests."
+	- Source: [add-repository-instructions-in-your-ide](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide)
+- Reproducible defect report showing direct all-target instruction not followed and partial execution/regression:
+	- Source: [#316106](https://github.com/microsoft/vscode/issues/316106)
+- Community report showing startup guardrails not loaded before agent actions:
+	- Source: [#186225](https://github.com/orgs/community/discussions/186225)
+- Community report showing repeated instruction ignoring and incomplete execution:
+	- Source: [#190237](https://github.com/orgs/community/discussions/190237)
+- Broad pattern evidence (many similar reports):
+	- Source: [copilot instructions ignored search](https://github.com/orgs/community/discussions?discussions_q=copilot+instructions+ignored)
+- Contrast evidence that enforcement is technically possible in agent tooling: Claude supports blocking/deny hooks (PreToolUse).
+	- Source: [hooks](https://code.claude.com/docs/en/hooks)
+
+**Why this belongs here:** When direct instructions are non-binding by design, the user
+must manually supervise every step. Productivity is lost to correction loops, rollback
+work, and reconstructed context instead of actual development.
