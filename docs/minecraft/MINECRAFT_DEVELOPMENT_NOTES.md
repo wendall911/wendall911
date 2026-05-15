@@ -1,5 +1,8 @@
 # Dev Notes for 1.12+ modding
 
+## Version Maintenance Strategy
+See `.github/project-context.md` in the wendall911 repo for the full branching and version maintenance strategy.
+
 ## Show gradlew tasks
 ./gradlew tasks
 

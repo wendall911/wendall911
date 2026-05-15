@@ -5,8 +5,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MODE="${1:-check}"
 
-SOURCE_GUARDRAILS="$ROOT_DIR/guardrails.md"
-SOURCE_INSTRUCTIONS="$ROOT_DIR/.github/copilot-instructions.project-template.md"
+SOURCE_GUARDRAILS="$ROOT_DIR/.github/guardrails.md"
+SOURCE_INSTRUCTIONS="$ROOT_DIR/.github/agent-instructions.template.md"
 SOURCE_CHILD_HOOK="$ROOT_DIR/.github/hooks/pre-commit.child"
 
 if [[ ! -f "$SOURCE_GUARDRAILS" ]]; then
