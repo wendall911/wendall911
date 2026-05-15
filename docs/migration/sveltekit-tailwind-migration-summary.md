@@ -74,5 +74,22 @@ Validation outcome for this repository
 - Integration tests: 1 passed (Playwright using system Chromium).
 - All primary upgrade regressions identified in-session were corrected.
 
+Post-migration issues found during new project setup
+
+lucide-svelte deprecation
+- `lucide-svelte` was carried forward from the migration without addressing its upstream deprecation warning.
+- Fix: replace `lucide-svelte` with `@lucide/svelte` in dependencies and update all import paths. Straight rename — no API changes.
+- Affected files: `package.json`, any component importing from `lucide-svelte`.
+
+@eslint/js explicit dependency (pnpm strict isolation)
+- `@eslint/js` is imported directly in `eslint.config.js` but was not listed as an explicit devDependency.
+- Under npm this resolves transitively; under pnpm strict isolation it fails with `ERR_MODULE_NOT_FOUND`.
+- Fix: add `@eslint/js` as an explicit direct devDependency.
+
+.prettierignore gaps
+- `pnpm-lock.yaml` and `.claude/` were not excluded from prettier.
+- After `pnpm install` regenerates the lockfile, lint fails because prettier wants to reformat it.
+- Fix: add `pnpm-lock.yaml` and `.claude/` to `.prettierignore`.
+
 Related file
 - Reusable process document: `sveltekit-tailwind-migration-plan.md`

@@ -184,6 +184,12 @@ Common Pitfalls and Fixes
    Fix: upgrade to Node 24-capable action majors (`@v6`) and keep workflow runtime on `node-version: 24`.
 - Pitfall: VS Code reports `Unknown at rule @apply` in valid Tailwind v4 stylesheets.
    Fix: install/enable Tailwind CSS IntelliSense, map `*.css` to `tailwindcss` language mode, point `tailwindCSS.experimental.configFile` at the entry stylesheet, and verify server status with `Tailwind CSS: Show Output`.
+- Pitfall: `lucide-svelte` is deprecated; `pnpm install` emits a deprecation warning pointing to `@lucide/svelte`.
+   Fix: Replace `lucide-svelte` with `@lucide/svelte` in dependencies and update all import statements from `'lucide-svelte'` to `'@lucide/svelte'`. The package is a straight rename — same API and exports, no other changes required.
+- Pitfall: `@eslint/js` resolves as a transitive dependency under npm but is not accessible under pnpm strict isolation, causing `ERR_MODULE_NOT_FOUND` at lint time.
+   Fix: Add `@eslint/js` as an explicit direct devDependency.
+- Pitfall: `pnpm-lock.yaml` and `.claude/` not excluded from prettier, causing lint failure after `pnpm install` regenerates the lockfile.
+   Fix: Add `pnpm-lock.yaml` and `.claude/` to `.prettierignore`.
 
 Reusable Command Sequence (copy-paste template)
 ```
