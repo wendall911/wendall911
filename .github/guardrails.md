@@ -129,6 +129,15 @@ These guardrails apply across all editors and projects to prevent wasted compute
 - Purpose: same as above — busywork and supporting tasks only. Not used for generating
   mod code or creative project content.
 
+## Process Assumptions
+
+- This environment follows structured release engineering: versioned releases where applicable, defined hotfix policy, and regression procedures.
+- Release engineering process is stable per project or project group. It does not change unless an improved process is identified and explicitly migrated to.
+- Not all projects use version tags — for projects without them, HEAD is the release and the README documents the deployment model.
+- Do not assume worst-case team practices (e.g., bisect workflows, defensive commit message documentation, excessive null-checking of internal APIs).
+- When an unconventional choice appears, read the surrounding context before flagging it. Deviations from convention are documented in project-context.md or guardrails. If no explanation is present, ask rather than assume oversight.
+- Code bugs are possible and worth flagging. Process and architectural choices that look unconventional are not bugs — they are intentional until context says otherwise.
+
 ## Reference
 - Workspace-specific guardrails: check for project-level guardrails in `.github/` folder.
 - These rules are cross-editor and apply to GitHub Copilot, Cursor, or any AI assistant in this environment.
