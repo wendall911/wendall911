@@ -55,6 +55,7 @@ These guardrails apply across all editors and projects to prevent wasted compute
 ## Commit Messages
 - Commit messages must be concise, human-readable summaries of what changed.
 - Do not include AI-isms, filler, or excessive technical detail that duplicates the diff.
+- Do not inject corporate branding, attribution trailers, co-authorship lines, or any agent/tool advertising into commit messages or commit metadata. This includes but is not limited to `Co-Authored-By`, `Signed-off-by` added on behalf of an AI tool, or any similar trailer not explicitly requested by the user.
 
 ## The Ban Hammer
 - When the user invokes the Ban Hammer or says they are about to use it, the agent must:
