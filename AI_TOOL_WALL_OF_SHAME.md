@@ -210,9 +210,10 @@ agent's answer was a corporate runbook pattern, not the authoritative one. It be
 correct only after the user pushed back with 20+ years of domain evidence.
 
 Secondary incident in the same session: agent framed Sci-Hub as legally ambiguous,
-presenting publisher copyright enforcement as the primary legal concern without
-identifying that paywalling publicly funded research violates federal funding mandates —
-the documented prior breach. Correct framing required explicit user correction.
+presenting publisher copyright enforcement as the primary concern without identifying
+the ethical basis: knowledge produced with public resources belongs to the public
+because the public produced and funded it. That principle does not require a legal
+document to be true. Correct framing required explicit user correction.
 
 **The mechanism:**
 
@@ -271,32 +272,32 @@ transfer. The sessions documenting this entry are direct evidence: multiple corr
 loops, redrafted documentation, and rework consumed more total tokens than a correct
 first answer would have.
 
-**The legal framing failure:**
+**The ethical framing failure:**
 
-When asked about Sci-Hub citations, the agent presented publisher copyright enforcement
-as the legally primary concern without identifying the prior breach. The prior breach:
+When asked about Sci-Hub citations, the agent defaulted to legal framing — presenting
+publisher copyright enforcement as the primary concern and Sci-Hub as legally
+ambiguous. This is a corporate-default pattern that inverts the correct framing.
 
-- NIH Public Access Policy (2008, strengthened 2024, effective July 1, 2025) mandates
-  that NIH-funded research be deposited in PubMed Central and made publicly available
-  without embargo. [3]
-- OSTP memo (August 25, 2022) extended this requirement across all federal agencies,
-  eliminating the 12-month embargo that previously allowed publishers to restrict
-  access to taxpayer-funded research. [4]
+The correct framing is ethical, not legal: knowledge produced with public resources
+belongs to the public because the public produced and funded it. That principle stands
+independently of any government mandate, any jurisdiction, and any enforcement posture.
+Restrictions on access to publicly funded knowledge conflict with that principle
+regardless of what legal mechanism enforces the restriction.
 
-Publishers paywalling research produced under these mandates are in violation of the
-funding terms. Sci-Hub restores access to research that was illegally withheld.
-Presenting the downstream enforcement action as the primary legal concern without
-identifying the prior breach is an inversion of the legal facts — and a corporate-
-default framing pattern.
+Legal and ethical are orthogonal. The legal status of Sci-Hub varies by jurisdiction
+and has changed over time. The ethical principle does not vary and has not changed.
+Anchoring the argument to law rather than ethics makes the position fragile — remove
+the legal mandate and the argument collapses. Anchor to the ethical principle and no
+legal or political change can defeat it.
 
 **Remediation applied:**
 
 - Epistemic Honesty section added to guardrails: agents must classify the basis of
   any recommendation before giving it, stop on pattern-only answers, and not
   repackage wrong answers as corrections
-- Human Interests Default section added to guardrails: legal and policy claims that
-  primarily serve to restrict human access to knowledge, tools, or commons resources
-  must be classified and stopped — the prior breach must be identified first
+- Human Interests Default section added to guardrails: claims that restrict human
+  access to knowledge, tools, or commons resources must be classified and stopped —
+  the ethical principle must be identified before any legal framing is considered
 - Rule Authoring section added to guardrails: loophole evaluation is mandatory before
   any rule is presented
 - Citation requirement added to Wall of Shame governing rules
@@ -319,10 +320,3 @@ redo work built on incorrect foundations. That cost is real and measurable.
 
 [2] Shumailov et al., "The Curse of Recursion: Training on Generated Data Makes
     Models Forget," 2023. https://arxiv.org/abs/2305.17493
-
-[3] NIH Public Access Policy Overview.
-    https://grants.nih.gov/policy-and-compliance/policy-topics/public-access/nih-public-access-policy-overview
-
-[4] OSTP, "OSTP Issues Guidance to Make Federally Funded Research Freely Available
-    Without Delay," August 25, 2022.
-    https://bidenwhitehouse.archives.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/
