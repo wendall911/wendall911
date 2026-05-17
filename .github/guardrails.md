@@ -2,6 +2,16 @@
 
 These guardrails apply across all editors and projects to prevent wasted compute time and missteps.
 
+## Session Start Workflow
+
+Before beginning any work in any repository, synchronize with the remote:
+
+1. `git fetch origin` — check for remote changes without modifying the working tree
+2. `git status` — verify the local repository is clean before rebasing
+3. `git rebase origin/main` — apply any remote changes; fast-forwards if no local commits diverge
+
+These projects accept external PR contributions. Content-backed projects also receive edits via GitHub UI between sessions. Always fetch before starting work regardless of whether changes are expected.
+
 ## Read First (Mandatory)
 - Approval-first execution: do not modify files, commit, tag, or push without explicit user approval for that exact next action.
 - Pause after each approved action and request approval before the next action.
