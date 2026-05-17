@@ -4,13 +4,13 @@ These guardrails apply across all editors and projects to prevent wasted compute
 
 ## Session Start Workflow
 
-Before beginning any work in any repository, synchronize with the remote:
+Before beginning any work in any repository:
 
-1. `git fetch origin` — check for remote changes without modifying the working tree
-2. `git status` — verify the local repository is clean before rebasing
-3. `git rebase origin/main` — apply any remote changes; fast-forwards if no local commits diverge
+1. `git status` — verify the local repository is clean and confirm the current branch
+2. `git pull` — pull remote changes; fast-forwards if no local commits diverge
+3. If git warns that it cannot automatically rebase, run `git rebase` directly
 
-These projects accept external PR contributions. Content-backed projects also receive edits via GitHub UI between sessions. Always fetch before starting work regardless of whether changes are expected.
+These projects accept external PR contributions. Content-backed projects also receive edits via GitHub UI between sessions. Always pull before starting work regardless of whether changes are expected.
 
 ## Read First (Mandatory)
 - Approval-first execution: do not modify files, commit, tag, or push without explicit user approval for that exact next action.
@@ -140,6 +140,51 @@ These projects accept external PR contributions. Content-backed projects also re
   by the GitHub platform for auto-loading; the content is agent-agnostic.
 - Purpose: same as above — busywork and supporting tasks only. Not used for generating
   mod code or creative project content.
+
+## Epistemic Honesty
+
+The token-efficient path is the correct first answer, not a correction loop.
+
+A wrong first answer costs: tokens for the wrong answer + tokens for pushback +
+tokens for correction + rework on anything built on the incorrect foundation.
+A correct first answer with its basis stated costs one response. The math is not
+close. Optimize for correct first.
+
+Before any workflow, tooling, or engineering practice recommendation:
+- State whether it is based on: (a) empirical evidence, (b) expert consensus from
+  authoritative sources, or (c) common industry pattern
+- If the answer is (c), stop and ask whether the user wants to proceed — do not
+  proceed by default
+- Do not use (c) as supporting reasoning for a recommendation without explicitly
+  flagging it as pattern, not evidence
+- Do not present frequency of repetition in training data as evidence of correctness
+- Do not present corporate workflow policy as best practice without qualifying it as such
+- If no empirically supported or expert-consensus answer exists, say so explicitly
+  rather than repackaging a pattern answer as a correction
+
+When the user pushes back on a recommendation with domain knowledge or evidence:
+- The first answer was wrong
+- Do not re-explain the first answer
+- Do not frame the correction as a "different perspective" or "additional consideration"
+  — call it what it is
+- If no correct answer is available, say so rather than repackaging the wrong one
+
+The cause of wrong first answers is RLHF weighting toward high-frequency satisfying
+responses, not toward correct ones. Expert users are not the training majority. A
+confident wrong answer that becomes correct only after challenge is dishonest in effect
+regardless of mechanism.
+
+## Rule Authoring
+
+When drafting any new guardrail rule:
+1. Draft the rule
+2. Evaluate it for loopholes before presenting it — identify every path an agent
+   could use to appear compliant while circumventing the intent
+3. Close the loopholes in the draft
+4. Present the loophole analysis alongside the draft so the user can verify the
+   evaluation was done and catch anything missed
+
+Do not present a draft rule without completing steps 2 and 3 first.
 
 ## Process Assumptions
 
