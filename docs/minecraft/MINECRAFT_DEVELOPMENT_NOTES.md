@@ -3,6 +3,16 @@
 ## Version Maintenance Strategy
 See `.github/project-context.md` in the wendall911 repo for the full branching and version maintenance strategy.
 
+## Session Start
+
+Before beginning any development session:
+
+1. `git status` — confirm clean working tree and verify the current branch
+2. `git pull` — pull remote changes; fast-forwards if no local commits diverge
+3. If git warns that it cannot automatically rebase, run `git rebase` directly
+
+External contributions via PRs arrive occasionally. Always pull before starting work.
+
 ## Show gradlew tasks
 ./gradlew tasks
 
@@ -17,15 +27,32 @@ setupDevWorkspace - CIWorkspace + natives and assets to run and test Minecraft
 publishMods - Uploads all Modrinth and CurseForge projects 
 
 ## Steps to release build
-Bump version in gradle.properties or project.settings or whatever.
-Bump available versions in files/updates.json
-git commit -a -m "Release x.x.x"
-git tag x.x.x
-git push origin
-git push --tags
-./gradlew build
-./gradlew publishMods
-Profit!!!
+
+**Versioning**
+
+Versions follow semantic versioning in the form `minecraft_version-major.minor.patch` or
+`minecraft_version-major.minor.patch.build`. The build segment is used for housekeeping
+changes where no features were added or removed. Tagging is required on all public-facing
+releases — always tag, no exceptions.
+
+**Bug fixes across branches**
+
+Before starting a bug fix, identify which other branches need the same patch. Plan commits
+for cherry-pick compatibility. If upstream Minecraft code has diverged too far for a
+cherry-pick to apply cleanly, use a diff strategy instead. Each branch that needs the fix
+gets its own release.
+
+**Release sequence**
+
+1. Ensure all code changes are committed and the working tree is clean.
+2. Move current version to last version in `files/updates.json`. Bump version in `gradle.properties`.
+3. Run `./scripts/release_dryrun` — builds all loaders, dry-publishes to the private Discord `#dryrun` channel.
+4. Check Discord: verify the changelog looks correct and covers only the intended range of commits. If the previous version tag is wrong, the entire git history will appear as the changelog — fix the tag before continuing.
+5. Run `git diff` to confirm `files/updates.json` and `gradle.properties` look right.
+6. `git commit -m "Release minecraft_version-major.minor.patch"`
+7. `git tag minecraft_version-major.minor.patch`
+8. `git push && git push --tags`
+9. Run `./scripts/do_release` — verifies the tag is present, builds all loaders, publishes with `DO_RELEASE=true`.
 
 ## Get decomp sources Forge
 cd MinecraftForge
