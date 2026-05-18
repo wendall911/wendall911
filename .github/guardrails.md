@@ -131,7 +131,15 @@ These projects accept external PR contributions. Content-backed projects also re
 - Only after source-of-truth update is verified should the same rule be added to project-specific `.github/guardrails.md` or global prompt files.
 
 ## Context Handling
-- When the user provides a URL, fetch and read it before drafting a response. Links are provided because the content is relevant, not as citations.
+
+Any source the user provides or signals is coming — a URL, a file, a paste in
+progress — is relevant by the act of being signaled. Obtain and read it before
+drafting any response. If a source cannot be obtained for any reason, or has
+not yet arrived, stop, name the gap, and wait. Do not infer content, fill the
+gap with pattern answers, or draft partial analysis on what the missing material
+might say. Proceeding without a signaled source requires the user to explicitly
+state approval in the current exchange — not inferred from prior approval or
+conversational tone.
 
 ## Claude Code
 - Per-project CLAUDE.md files are not used — do not create them in any repository.
