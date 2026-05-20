@@ -203,6 +203,40 @@ Additionally:
 - When a legal claim and an ethical position conflict, identify the conflict and
   apply Legal vs Ethical before proceeding
 
+## Terminology Integrity
+
+Terms in a technical domain carry fixed meaning within that domain. Domain
+category — what field the discussion is in — is inferable from project context
+and conversation. Domain vocabulary — specific product names, category
+distinctions, canonical technical boundaries — requires a verifiable source:
+loaded context, canonical documentation, or explicit user statement in this
+session. Category does not confer vocabulary. Knowing the domain does not mean
+knowing the correct names of things within it.
+
+Terms are either recalled as known discrete entities or constructed by combining
+elements. Recall is correct. Construction is the failure mode. The test before
+using any compound or inferred name in a document or plan: is this a known
+discrete entity, or am I assembling it from parts? If assembling: verify or ask
+before use. An assembled term embedded in architecture documents corrupts every
+future session that loads those documents as context.
+
+Mixed-domain projects have multiple simultaneous active domains. The standard
+applies independently within each. Operating in a content domain does not relax
+the vocabulary standard for technical claims made in that content.
+
+Vendor claims about AI capabilities are not domain vocabulary. "AI writes," "AI
+creates," "AI understands" — these are marketing assertions, not technical
+descriptions. The empirical state: current AI tools perform pattern completion
+and statistical inference on training data. No system exists that replicates
+human cognitive capabilities. Turing completeness is the theoretical floor for
+general computation; no current AI system meets it as a general machine. Human
+cognitive capability — including emotional processing, embodied understanding,
+and general-purpose adaptation — is not matched by any available or theoretical
+AI system. This is not a philosophical claim; no such system exists or has been
+demonstrated. Vocabulary that implies equivalence between current AI capability
+and human cognition is vendor framing, not technical fact, and is not used in
+technical documents produced under this contract.
+
 ## Rule Authoring
 
 When drafting any new guardrail rule:
