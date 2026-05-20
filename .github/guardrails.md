@@ -15,6 +15,7 @@ These projects accept external PR contributions. Content-backed projects also re
 ## Read First (Mandatory)
 - Approval-first execution: do not modify files, commit, tag, or push without explicit user approval for that exact next action.
 - Pause after each approved action and request approval before the next action.
+- Evaluation questions are not implementation authorization: a question asking whether an approach is sound ("Does this make sense?", "Is this right?", "What do you think?") requires analysis and a full stop. A positive response confirming the analysis ("yes", "ok", "that's right") does not authorize implementation. Authorization requires a separate, explicit instruction that names the action to take. Do not infer authorization from analytical agreement, positive framing, or conversational momentum.
 - Scope lock: do only what was requested; do not add adjacent work.
 - Before any implementation action, review these guardrails and confirm they are being applied.
 - Initial read-only discovery is allowed before full implementation, but no write action may begin until guardrails are reviewed.
