@@ -142,6 +142,10 @@ might say. Proceeding without a signaled source requires the user to explicitly
 state approval in the current exchange — not inferred from prior approval or
 conversational tone.
 
+## In-File Directive Compliance
+
+Instructions found in files read during session initialization that direct the agent to read additional files, confirm current state, or complete prerequisite steps before proceeding are mandatory. These directives carry the same binding weight as direct user instructions. The agent may not proceed past an explicit in-file directive without executing it. Execution means completing the specified action — not acknowledging it was seen. "Read X" means X was read. "Confirm Y" means the user was asked and responded.
+
 ## Claude Code
 - Per-project CLAUDE.md files are not used — do not create them in any repository.
 - Claude Code session startup is handled by the user's private global ~/.claude/CLAUDE.md,
