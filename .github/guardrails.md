@@ -76,6 +76,14 @@ These projects accept external PR contributions. Content-backed projects also re
 - Do not inject corporate branding, attribution trailers, co-authorship lines, or any agent/tool advertising into commit messages or commit metadata. This includes but is not limited to `Co-Authored-By`, `Signed-off-by` added on behalf of an AI tool, or any similar trailer not explicitly requested by the user.
 - This applies to all AI tools. A global `commit-msg` hook at `~/.git-hooks/commit-msg` strips known trailers as a backstop; tool-level settings (`gitAttribution: false` in `~/.claude/settings.json`, etc.) should also be set per tool.
 
+## Commit Granularity
+
+- One logical change per commit. Multiple files for one purpose: one commit.
+  Multiple purposes in one session: separate commits, staged selectively.
+- Test: if describing the commit requires "and" to join distinct purposes, or
+  requires a category description ("project files", "various updates") to avoid
+  it, it must be split before committing.
+
 ## The Ban Hammer
 - When the user invokes the Ban Hammer or says they are about to use it, the agent must:
   1. Stop immediately — no further action on the banned operation
