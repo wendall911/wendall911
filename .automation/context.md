@@ -11,7 +11,7 @@ Each subdirectory with a `.git` folder is an independent repository. Active mod 
 - SurvivalistEssentials, SurvivalistEssentialsModpack, TCIntegrations, TinkerSurvival
 - TinkerSurvivalModpack, TunnelTrench, WhiteNoise
 
-Each sub-repository has its own `project-context.md` describing its structure, supported modloaders, and active branches.
+Each sub-repository has its own `.automation/context.md` describing its structure, supported modloaders, and active branches. The context for these should only be read when explicitly asked for.
 
 ## ModrinthBadge-Unofficial
 Mixed project. The repo root is a Python API. The `modrinth.roughness.technology/` subdirectory is a SvelteKit/Tailwind frontend hosted at modrinth.roughness.technology. These are separate concerns — do not conflate them. See that repo's own `project-context.md`.
@@ -58,6 +58,8 @@ See `docs/minecraft/MINECRAFT_DEVELOPMENT_NOTES.md` for the full release sequenc
 
 Deployment is incomplete until both commit and tags are pushed. Do not skip steps or reorder them.
 
+VCS operations are banned for AI tools.
+
 ## Modpacks
 A modpack is a published collection of mods including configurations, datapack
 overrides, and texture pack overrides. Modpacks target a specific modloader and
@@ -74,13 +76,7 @@ Modpacks have separate client-side and server-side mod lists, as mods can be:
 This designation is defined in each mod's build file upload configuration.
 
 ## Workspace Governance
-- `guardrails.md` (repo root) is the source of truth for all AI guardrails across this workspace and its sub-repos
-- `.github/sync-project-agent-rules.sh sync` propagates guardrails, copilot instructions, and pre-commit hooks to all child repos
-- Run the sync after any update to `guardrails.md`, `copilot-instructions.project-template.md`, or `hooks/pre-commit.child`
-- See `NEW_PROJECT_REPOSITORY_SETUP.md` for onboarding a new child repo
+- All projects governed by AI_CONDUCT.md
 
 ## Reference Docs
 - `docs/minecraft/MINECRAFT_DEVELOPMENT_NOTES.md` — Gradle tasks, release steps, decomp source setup
-- `docs/minecraft/MINECRAFT_26.1_UPDATE.md` — Porting notes for Minecraft 26.1 (NeoForge + Fabric changes)
-- `docs/migration/sveltekit-tailwind-migration-plan.md` — Reference artifact for SvelteKit/Tailwind project setup; consult for any new SvelteKit/Tailwind project
-- `docs/migration/sveltekit-tailwind-migration-summary.md` — Migration summary for the same
