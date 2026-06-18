@@ -38,6 +38,8 @@
   - Minecraft Forge Mod to pause time, weather and season while no players are logged into server.
 - Survivalist Essentials [![Project](http://cf.way2muchnoise.eu/full_676800_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/survivalist-essentials) [![Project](https://modrinth.roughness.technology/full_survivalist-essentials_downloads.svg)](https://modrinth.com/mod/survivalist-essentials)
   - Minecraft 1.18.2+ early game survival concept.
+- Tunnel & Trench [![](http://cf.way2muchnoise.eu/full_1540443_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tunnel-trench) [![Project](https://modrinth.roughness.technology/full_tunnel-trench_downloads.svg)](https://modrinth.com/mod/tunnel-trench)
+  - Tunnel & Trench adds Vanilla-style 3x3 tools that speed up everyday mining and digging without altering the progression feel.
 - Magical Psi Revival [![Project](http://cf.way2muchnoise.eu/full_1320084_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/magical-psi-revival) [![Project](https://modrinth.roughness.technology/full_magical-psi-revival_downloads.svg)](https://modrinth.com/mod/magical-psi-revival)
 - Slurp Reborn [![Project](http://cf.way2muchnoise.eu/full_620378_downloads.svg)](https://minecraft.curseforge.com/projects/620378)
   - A Minecraft 1.18.1+ Tough As Nails extension mod that allows drinking from a water source with an open hand. Just crouch and drink!
